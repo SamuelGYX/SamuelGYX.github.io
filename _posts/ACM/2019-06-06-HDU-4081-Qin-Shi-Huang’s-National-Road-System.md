@@ -5,7 +5,7 @@ date:   2019-06-06
 categories: ACM
 ---
 
-# [HDU 4081 Qin Shi Huang’s National Road System](http://acm.hdu.edu.cn/showproblem.php?pid=4081) 
+[HDU 4081 Qin Shi Huang’s National Road System](http://acm.hdu.edu.cn/showproblem.php?pid=4081) 
 
 ## Problem Description
 > **There were n cities in China and Qin Shi Huang wanted them all be connected by n-1 roads, in order that he could go to every city from the capital city Xianyang.**  
