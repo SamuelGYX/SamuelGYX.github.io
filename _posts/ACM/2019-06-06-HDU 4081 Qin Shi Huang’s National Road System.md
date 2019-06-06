@@ -6,9 +6,11 @@ categories: ACM
 ---
 
 # [HDU 4081 Qin Shi Huang’s National Road System](http://acm.hdu.edu.cn/showproblem.php?pid=4081) 
+
 ## Problem Description
 > **There were n cities in China and Qin Shi Huang wanted them all be connected by n-1 roads, in order that he could go to every city from the capital city Xianyang.**  
 > Although Qin Shi Huang was a tyrant, he wanted the total length of all roads to be minimum, so that the road system may not cost too many people’s life. A daoshi (some kind of monk) named Xu Fu told Qin Shi Huang that he could build a road by magic and that magic road would cost no money and no labor. But Xu Fu could only build ONE magic road for Qin Shi Huang. So Qin Shi Huang had to decide where to build the magic road. Qin Shi Huang wanted the total length of all none magic roads to be as small as possible, but Xu Fu wanted the magic road to benefit as many people as possible —— **So Qin Shi Huang decided that the value of A/B (the ratio of A to B) must be the maximum, which A is the total population of the two cites connected by the magic road, and B is the total length of none magic roads.**  
+
 ## Input
 > The first line contains an integer t meaning that there are t test cases(t <= 10).  
 > For each test case:  
@@ -27,16 +29,19 @@ categories: ACM
 1 2 30
 2 2 40
 ```
+
 ## Output
 > For each test case, print a line indicating the above mentioned maximum ratio A/B. The result should be rounded to 2 digits after decimal point.  
 ```
 65.00
 70.00
 ```
+
 ## 解析
 1. 正常构建MST，但同时需要记录好构建出来的Tree，以及总长度cost
 2. 通过BFS，遍历所有端点，记录maxd[i][j]，即在MST之中，i与j之间最长的边
 3. 遍历每一对端点(i,j)，无论此时Edge(i,j)是否在MST之中，测试在此对端点间构建魔法边所得答案，即(w[i]+w[j])/(cost-maxd[i][j])，记录最大值即为最优解
+
 ## Source Code
 ```
 //
